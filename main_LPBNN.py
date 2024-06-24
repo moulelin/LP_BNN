@@ -91,8 +91,8 @@ if(args.dataset == 'cifar10'):
 elif(args.dataset == 'cifar100'):
     print("| Preparing CIFAR-100 dataset...")
     sys.stdout.write("| ")
-    trainset = torchvision.datasets.CIFAR100(root='data/cifar100', train=True, download=True, transform=transform_train)
-    testset = torchvision.datasets.CIFAR100(root='data/cifar100', train=False, download=False, transform=transform_test)
+    trainset = torchvision.datasets.CIFAR100(root='./data/cifar100', train=True, download=True, transform=transform_train)
+    testset = torchvision.datasets.CIFAR100(root='./data/cifar100', train=False, download=False, transform=transform_test)
     num_classes = 100
 print('batch_size=',batch_size)
 trainloader = torch.utils.data.DataLoader(trainset, batch_size=batch_size, shuffle=True, num_workers=2)
